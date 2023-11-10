@@ -1,3 +1,530 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    শিক্ষাই জাতির মেরুদন্ড । শিক্ষার কোনো মূল্য হয় না কিংবা কেউ কোনো দিন দিতে পারবে না । মুলত কলেজ এর শিক্ষার্থীদের জন্য এর ওয়েব সাইট টি বানানো হয়েছে । এই ওয়েব থেকে শিক্ষার্থীরা লজিক গেট এর বাস্তব ঊদাহরণ সহ লজিক গেট শিখতে পারবে । 
+    এই ওয়েব সাইটটি কখনোই পেইড হবে না কিংবা এড দেখাবে , সম্পূর্ণ ফ্রিতে এবং কোনো ঝামেলা ছাড়াই শিক্ষার্থীরা শিখতে পারবে । 
+    আপনার অনুদানে আমাদের সেবামূলক ওয়েবসাইট আমরা হোস্ট করি কিংবা অন্য কোনো ওয়েবসাইট বানাতে উৎসাহিত হই । সাহায্যের জন্য মেইলঃ 5687nabil@gmail.com 
+    -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nabil">
+    <title>Learn Logic Board</title>
+    <link rel="stylesheet" href="./src/css/index.css">
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./allowjava.html">
+    </noscript>
+
+    <script>
+        if (window.innerWidth < 852) {
+            window.location.href = "./mobile/";
+            console.log("Loading Mobile Version...")
+        }
+        else {
+            console.log("Loading Desktop Version...")
+        }
+    </script>
+</head>
+<body style="background: linear-gradient(to left, #2d2d2d 90%, #0066ff 100%); color: #F8F8FF; font-weight: 500;" >
+    <div class="container" width="100%">
+        <nav class="navbar" style="padding: 0; margin: 0; border: 0; width: 100%; position: fixed; top: 0;">
+            <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color:aqua;"> 
+                <li>
+                    <a href="#andgate">AND Gate</a>
+                </li>
+                <li>
+                    <a href="#orgate">OR Gate</a>
+                </li>
+                <li>
+                    <a href="#notgate">NOT Gate</a>
+                </li>
+                <li>
+                    <a href="#nandgate">NAND Gate</a>
+                </li>
+                <li>
+                    <a href="#norgate">NOR Gate</a>
+                </li>
+                <li>
+                    <a href="#xorgate">X-OR Gate</a>
+                </li>
+                <li>
+                    <a href="#xnorgate">X-NOR Gate</a>
+                </li>
+            </ul>
+        </nav>
+
+            <!--- <div class="supportme">
+                <p style="text-align: center;"><a href="https://www.buymeacoffee.com/w3nabil" target="_blank"><img src="https://cdn.buymeacoffee.com/assets/img/home-page-v3/bmc-new-logo.png" alt="Buy Me A Coffee" style="height: 30px; width: 100px; border: 3px solid black;" ></a></p>
+            </div> --->
+        <div class="scrollable" style="margin-left: 5%; width: 90%; margin-top: 5%; margin-right: 5%; height: 100vh;" >
+            
+            <!-- AND GATE -->
+            <div id="andgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">AND GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="and1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <button id="and2" style="width: 64px; height: 64px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/and-gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="andbulb">
+                        <script src="./src/js/andgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for AND Gate should be A × B = X . Where A and B is your Input and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="3" style="padding: 5px;">AND GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- OR GATE -->
+            <div id="orgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">OR GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="orgatebtn1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <button id="orgatebtn2" style="width: 64px; height: 64px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/or_gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="orbulb">
+                        <script src="./src/js/orgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for AND Gate should be A + B = X . Where A and B is your Input and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="3" style="padding: 5px;">OR GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NOT GATE -->
+            <div id="notgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NOT GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="notgatebtn1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <!--<button id="notgatebtn2" style="width: 64px; height: 64px;">0</button>-->
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/not-gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="notbulb">
+                        <script src="./src/js/notgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for NOT Gate should be Ā = X . Where A is your Input, Ā is the opposite digit of your input and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="3" style="padding: 5px;">NOT GATE EQUATION TABLE (Ā = X)</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>Ā</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NAND GATE -->
+            <div id="nandgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NAND GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="nand1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <button id="nand2" style="width: 64px; height: 64px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/nand-gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="nandbulb">
+                        <script src="./src/js/nandgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for AND Gate should be A × B = AB, And the <span style="text-decoration: overline;">AB</span> = X . Where A and B is your Input, AB is the multiplication between A and B, <span style="text-decoration: overline;">AB</span> is the opposite of AB, and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="5" style="padding: 5px;">NAND GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>AB</td>
+                            <td><span style="text-decoration: overline;">AB</span></td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+            
+            <!-- NOR GATE -->
+            <div id="norgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NOR GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="nor1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <button id="nor2" style="width: 64px; height: 64px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/nor_gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="norbulb">
+                        <script src="./src/js/norgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for AND Gate should be <span style="text-decoration: overline;">A + B</span> = X . Where A and B is your Input, A + B is the addition of A and B, <span>A + B</span> is the opposite of A + B, and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="5" style="padding: 5px;">NAND GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>A+B</td>
+                            <td><span style="text-decoration: overline;">A + B</span></td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+
+            
+            <!-- XOR GATE -->
+            <div id="xorgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">X-OR GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="xor1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <button id="xor2" style="width: 64px; height: 64px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/xor-gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="xorbulb">
+                        <script src="./src/js/xorgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for AND Gate should be <span style="text-decoration: overline;">A + B</span> = X . Where A and B is your Input, A + B is the addition of A and B, <span>A + B</span> is the opposite of A + B, and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="7" style="padding: 5px;">X-or GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td><span style="text-decoration: overline;">A</span></td>
+                            <td><span style="text-decoration: overline;">B</span></td>
+                            <td><span style="text-decoration: overline;">A</span>B</td>
+                            <td>A<span style="text-decoration: overline;">B</span></td>
+                            <td>X = (<span style="text-decoration: overline;">A</span>B + A<span style="text-decoration: overline;">B</span>)</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+            
+            <!-- X-Nor GATE -->
+            <div id="xnorgate" style="height: 100vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">X-NOR GATE</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>Input</h4>
+                        <h5>
+                            <button id="xnor1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                            <button id="xnor2" style="width: 64px; height: 64px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 20%;">
+                        <h4>Responsible Gate</h4>
+                        <img src="./src/img/xnor-gate.png" alt="" width="140vh">
+                    </div>
+                    <div id="light" style="padding-left: 20%;">
+                        <h4>Output</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="xnorbulb">
+                        <script src="./src/js/xnorgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>Accoring to the Boolean, The Equation for AND Gate should be <span style="text-decoration: overline;">A + B</span> = X . Where A and B is your Input, A + B is the addition of A and B, <span>A + B</span> is the opposite of A + B, and X is your expected output.</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="7" style="padding: 5px;">NAND GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td><span style="text-decoration: overline;">A</span></td>
+                            <td><span style="text-decoration: overline;">B</span></td>
+                            <td>AB</td>
+                            <td><span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span></td>
+                            <td>X = (AB + <span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span>)</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
+
+=======
 <!DOCTYPE html>
 <html lang="en">
 <!-- 
@@ -494,3 +1021,4 @@
 </body>
 </html>
 
+>>>>>>> 271e3179ae2bfecce85fd2190853c712740167be
