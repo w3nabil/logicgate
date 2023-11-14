@@ -1,3 +1,7 @@
+/*******************************************************
+** THIS WEBSITE IS OWNED AND DEVELOPED BY NABIL AHMED **
+********************************************************/
+
 const or1 = document.getElementById('orgatebtn1');
 const or2 = document.getElementById('orgatebtn2');
 const orbulb = document.getElementById('orbulb');

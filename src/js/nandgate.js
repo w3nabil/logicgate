@@ -38,3 +38,4 @@ function checkButtons_nand() {
 }
 
 console.log("Successfully Loaded AND GATE.. (4/7)")
+

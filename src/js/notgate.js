@@ -1,3 +1,7 @@
+/*******************************************************
+** THIS WEBSITE IS OWNED AND DEVELOPED BY NABIL AHMED **
+********************************************************/
+
 const not1 = document.getElementById('notgatebtn1');
 const notbulb = document.getElementById('notbulb');
 
@@ -21,3 +25,5 @@ not1.addEventListener('click', () => {
           notbulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
       }
   }
+
+console.log("Successfully Loaded Not Gate.... (3/7)")

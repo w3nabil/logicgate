@@ -1,3 +1,7 @@
+/*******************************************************
+** THIS WEBSITE IS OWNED AND DEVELOPED BY NABIL AHMED **
+********************************************************/
+
 const xor1 = document.getElementById("xor1");
 const xor2 = document.getElementById("xor2");
 const xorbulb = document.getElementById("xorbulb");

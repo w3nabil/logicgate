@@ -1,3 +1,7 @@
+/*******************************************************
+** THIS WEBSITE IS OWNED AND DEVELOPED BY NABIL AHMED **
+********************************************************/
+
 const xnor1 = document.getElementById("xnor1");
 const xnor2 = document.getElementById("xnor2");
 const xnorbulb = document.getElementById("xnorbulb");
@@ -32,5 +36,6 @@ function checkButtons_xnor() {
         xnorbulb.src = "https://www.w3schools.com/js/pic_bulboff.gif";
     }
 }
+
 
 console.log("Successfully Loaded XOR GATE... (7/7)");

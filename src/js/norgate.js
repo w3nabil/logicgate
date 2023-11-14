@@ -1,3 +1,7 @@
+/*******************************************************
+** THIS WEBSITE IS OWNED AND DEVELOPED BY NABIL AHMED **
+********************************************************/
+
 const nor1 = document.getElementById('nor1');
 const nor2 = document.getElementById('nor2');
 const norbulb = document.getElementById('norbulb');
@@ -32,4 +36,6 @@ function checkButtons_nor() {
     norbulb.src = "https://www.w3schools.com/js/pic_bulbon.gif";
   }
 }
+
+
 console.log("Successfully Loaded OR GATE... (5/7)")
