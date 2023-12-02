@@ -1,35 +1,576 @@
+<!--
+    
+Copyright 2024 | Nabil Ahmed 
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Site Maintenance</title>
+    <meta name="author" content="Nabil">
+    <meta name="title" content="লজিক গেট । সত্যক সারনি" />
+    <meta name="description" content="লজিক গেট হল ডিজিটাল সার্কিটের মৌলিক বিল্ডিং ব্লক। তারা বাইনারি ইনপুট (0s এবং 1s) এর উপর ভিত্তি করে লজিক্যাল অপারেশন করে এবং পূর্বনির্ধারিত নিয়মের উপর ভিত্তি করে একটি আউটপুট তৈরি করে। " />
+
+    <!-- Open Graph -->
+    <meta name="og:type" content="website" />
+    <meta name="og:url" content="https://w3nabil.github.io/logicgate/" />
+    <meta name="og:title" content="লজিক গেট । সত্যক সারনি" />
+    <meta name="og:description" content="লজিক গেট হল ডিজিটাল সার্কিটের মৌলিক বিল্ডিং ব্লক। তারা বাইনারি ইনপুট (0s এবং 1s) এর উপর ভিত্তি করে লজিক্যাল অপারেশন করে এবং পূর্বনির্ধারিত নিয়মের উপর ভিত্তি করে একটি আউটপুট তৈরি করে। " />
+    <meta name="og:image" content="https://w3nabil.github.io/logicgate/src/img/webimage.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://w3nabil.github.io/logicgate/" />
+    <meta name="twitter:title" content="লজিক গেট । সত্যক সারনি" />
+    <meta name="twitter:description" content="লজিক গেট হল ডিজিটাল সার্কিটের মৌলিক বিল্ডিং ব্লক। তারা বাইনারি ইনপুট (0s এবং 1s) এর উপর ভিত্তি করে লজিক্যাল অপারেশন করে এবং পূর্বনির্ধারিত নিয়মের উপর ভিত্তি করে একটি আউটপুট তৈরি করে। " />
+    <meta name="twitter:image" content="https://w3nabil.github.io/logicgate/src/img/webimage.png" />
+
+    <title>লজিক গেট | সত্যক সারনি</title>
+    <link rel="stylesheet" href="./index.css">
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=./allowjava.html">
+    </noscript>
+
+    <script>
+        if (window.innerWidth > 852) {
+            window.location.href = "../";
+            console.log("Loading Desktop Version...")
+        }
+        else {
+            console.log("Loading Mobile Version...")
+        }
+    </script>
+</head>
+<body style="background: #2d2d2d; color: #F8F8FF; font-weight: 500;" >
+    <div class="container" width="100%">
+        <nav class="navbar" style="padding: 0; margin: 0; border: 0; width: 100%; position: fixed; top: 0;">
+            <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color:aqua;"> 
+                <li>
+                    <a href="#andgate"><b>AND গেট</b></a>
+                </li>
+                <li>
+                    <a href="#orgate"><b>OR গেট</b></a>
+                </li>
+                <li>
+                    <a href="#notgate"><b>NOT গেট</b></a>
+                </li>
+                <li>
+                    <a href="#nandgate"><b>NAND গেট</b></a>
+                </li>
+                <li>
+                    <a href="#norgate"><b>NOR গেট</b></a>
+                </li>
+                <li>
+                    <a href="#xorgate"><b>X-OR গেট</b></a>
+                </li>
+                <li>
+                    <a href="#xnorgate"><b>X-NOR গেট</b></a>
+                </li>
+                <!--
+                <li class="navbar-lang">
+                   <a href="./global/en/"><img src="./src/img/flag_uk.png" alt="ENGLISH" width="24px" height="24px"></a>
+                </li>
+                <li class="navbar-lang">
+                    <a href="./global/cn/"><img src="./src/img/flag_china.png" alt="MANDARIN" width="24px" height="24px"></a>
+                </li> -->
+            </ul>
+        </nav>
+
+            <!--- <div class="supportme">
+                <p style="text-align: center;"><a href="https://www.buymeacoffee.com/w3nabil" target="_blank"><img src="https://cdn.buymeacoffee.com/assets/img/home-page-v3/bmc-new-logo.png" alt="Buy Me A Coffee" style="height: 30px; width: 100px; border: 3px solid black;" ></a></p>
+            </div> --->
+        <div class="scrollable" style="margin-left: 5%; width: 90%; margin-top: 5%; margin-right: 5%; height: 100vh;" >
+            
+            <!-- AND GATE -->
+            <div id="andgate">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">AND গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="and1" style="width: 48px; height: 24px;">0</button><br><br><br>
+                            <button id="and2" style="width: 48px; height: 24px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/and-gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="andbulb" height="100px" width="auto">
+                        <script src="../src/js/andgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । AND গেটের সমীকরণ A × B = X । যেখানে A এবং B হল আমার ইনপুট এবং X (A গুনন B করার পর) হলো আমার আউটপুট । <br>নোটঃ বুলিয়ার এর গুনন এ A অথবা B যেকোনো একটির মান ০ হলে X = ০ হবে</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="3" style="padding: 5px;">AND GATE TRUTH TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+
+            <!-- OR GATE -->
+            <div id="orgate">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">OR গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="orgatebtn1" style="width: 48px; height: 24px;">0</button><br><br><br>
+                            <button id="orgatebtn2" style="width: 48px; height: 24px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/or_gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="orbulb" height="100px" width="auto">
+                        <script src="../src/js/orgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । OR গেটের সমীকরণ A + B = X । যেখানে A এবং B হল আমার ইনপুট এবং X (A যোগ B করার পর) হলো আমার আউটপুট । <br>নোটঃ বুলিয়ার এর যোগে A অথবা B যেকোনো একটির মান ১ হলে, যোগফল ১ হবে</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="3" style="padding: 5px;">OR GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NOT GATE -->
+            <div id="notgate">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NOT গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="notgatebtn1" style="width: 64px; height: 64px;">0</button><br><br><br>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/not-gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="notbulb" height="100px" width="auto">
+                        <script src="../src/js/notgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p>ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । নট গেটের সমীকরণ Ā = X । যেখানে A হলো আমার ইনপুট, Ā হল আমার ইনপুটের বিপরীত সংখ্যা এবং X হলো আমার আউটপুট।  <br> নোটঃ ০ এক বিপরীত সংখ্যা হলো ১ , আবার ১ এর বিপরীত সংখ্যা হলো ০ । </p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="3" style="padding: 5px;">NOT GATE EQUATION TABLE (Ā = X)</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>Ā</td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- NAND GATE -->
+            <div id="nandgate">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NAND গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="nand1" style="width: 48px; height: 24px;">0</button><br><br><br>
+                            <button id="nand2" style="width: 48px; height: 24px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/nand-gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="nandbulb" height="100px" width="auto">
+                        <script src="../src/js/nandgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p> ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । AND গেটের সমীকরণ হলো <span style="text-decoration: overline;">AB</span> = X । যেখানে A এবং B হল আমার ইনপুট, AB হলো A গুনন B, <span style="text-decoration: overline;">AB</span> হল AB এর বিপরীত, এবং X হলো আমার আউটপুট।</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="5" style="padding: 5px;">NAND GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>AB</td>
+                            <td><span style="text-decoration: overline;">AB</span></td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+            </div>
+            
+            <!-- NOR GATE -->
+            <div id="norgate">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NOR গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="nor1" style="width: 48px; height: 24px;">0</button><br><br><br>
+                            <button id="nor2" style="width: 48px; height: 24px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/nor_gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="norbulb" height="100px" width="auto">
+                        <script src="../src/js/norgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p> ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । NOR গেটের সমীকরণ <span style="text-decoration: overline;">A + B</span> = X । যেখানে A এবং B হলো আমার ইনপুট, A + B হলো A এবং B এর যোগ, <span style="text-decoration: overline;">A + B</span> হলো A + B এর বিপরীত, এবং X হলো আমার আউটপুট। </p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="5" style="padding: 5px;">NAND GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>A+B</td>
+                            <td><span style="text-decoration: overline;">A + B</span></td>
+                            <td>X</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+
+            
+            <!-- XOR GATE -->
+            <div id="xorgate">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">X-OR গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="xor1" style="width: 48px; height: 24px;">0</button><br><br><br>
+                            <button id="xor2" style="width: 48px; height: 24px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/xor-gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulboff.gif" alt="" id="xorbulb" height="100px" width="auto">
+                        <script src="../src/js/xorgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p> ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । X-OR গেটের সমীকরণ হল <span style="text-decoration: overline;">A</span>B + A<span style="text-decoration: overline;">B</span> = X । যেখানে A এবং B হল আমার ইনপুট, <span style="text-decoration: overline">A</span> হল A এর বিপরীত, <span style="text-decoration: overline">B</span> হল B এবং X এর বিপরীত হল আমার আউটপুট। </p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="7" style="padding: 5px;">X-or GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td><span style="text-decoration: overline;">A</span></td>
+                            <td><span style="text-decoration: overline;">B</span></td>
+                            <td><span style="text-decoration: overline;">A</span>B</td>
+                            <td>A<span style="text-decoration: overline;">B</span></td>
+                            <td>X = (<span style="text-decoration: overline;">A</span>B + A<span style="text-decoration: overline;">B</span>)</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+            
+            <!-- X-Nor GATE -->
+            <div id="xnorgate" style="padding-bottom: 20vh;">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">X-NOR গেট</u></h2>
+                <div id="cercuit" style="display: flex; width: 100%; padding-bottom: 5%; padding-top:5%; border: 2px solid aqua;">
+                    <div id="buttons" style="padding-left: 5%;">
+                        <h4>ইনপুট</h4>
+                        <h5>
+                            <button id="xnor1" style="width: 48px; height: 24px;">0</button><br><br><br>
+                            <button id="xnor2" style="width: 48px; height: 24px;">0</button>
+                        </h5>
+                    </div>
+                    <div id="introducegate" style="padding-left: 10%;">
+                        <h4>গেটের চিত্র</h4>
+                        <img src="../src/img/xnor-gate.png" alt="" width="100vh">
+                    </div>
+                    <div id="light" style="padding-left: 15%;">
+                        <h4>আউটপুট</h4>
+                        <img src="https://www.w3schools.com/js/pic_bulbon.gif" alt="" id="xnorbulb" height="100px" width="auto">
+                        <script src="../src/js/xnorgate.js"></script>
+                    </div>
+                </div>
+                <div class="concept">
+                    <p> ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । X-NOR গেটের সমীকরণ হল AB + <span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span> = X । যেখানে A এবং B আপনার ইনপুট, A + B হল A এবং B এর যোগ, <span style="text-decoration: overline;">A</span> হল A এর বিপরীত, <span style="text-decoration: overline;">B</span> হল B এর বিপরীত এবং X হল আমার আউটপুট।</p>
+                </div>
+                <div id="equation" style="width: 100%;">
+                    <table border="2px" style="text-align: center; width: 100%;" class="table">
+                        <tr>
+                            <td colspan="7" style="padding: 5px;">X-NOR GATE EQUATION TABLE</td>
+                        </tr>
+                        <tr style="color: aqua;">
+                            <td>A</td>
+                            <td>B</td>
+                            <td><span style="text-decoration: overline;">A</span></td>
+                            <td><span style="text-decoration: overline;">B</span></td>
+                            <td>AB</td>
+                            <td><span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span></td>
+                            <td>X = (AB + <span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span>)</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>1</td>
+                        </tr> 
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        .notice {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: aqua;
+            color: black;
             text-align: center;
-            background-color: #f2f2f2;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2em;
-            margin-top: 0;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
+            padding: 5px;
+            font-size: 12px;
         }
     </style>
-</head>
-<body>
-    <img src="https://3.imimg.com/data3/CL/HF/MY-15284119/images-ii-maintenance-500x500.png" alt="Logo">
-    <h1>Mobile Site Maintenance</h1>
-    <p>We're sorry, but the mobile version of our website is currently undergoing maintenance. We apologize for any inconvenience this may cause.</p>
-    <p>Please check back later for updates.</p>
+
+    <div class="notice">
+        <marquee style="width: 100%;" behavior="scroll" direction="left"><b> এই ওয়েবসাইটটি সর্বশেষ ১লা ডিসেম্বর, ২০২৩ এ আপডেট করা হয়েছে । আমাদের ওয়েবসাইটটি সম্পূর্ন HTML , JAVASCRIPT এবং CSS এর সাহায্যে সাধারণভাবে বানানো হয়েছে, যাতে যে কেও বুঝতে পারে কিভাবে HTML , JAVASCRIPT এবং CSS একসাথে ওয়েবসাইট এ কাজ করে । <a href="./notice/">Notice Board</a> </b></marquee>
+    </div>
 </body>
 </html>
