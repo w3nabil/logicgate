@@ -57,44 +57,69 @@ limitations under the License.
 </head>
 <body style="background: #2d2d2d; color: #F8F8FF; font-weight: 500;" >
     <div class="container" width="100%">
-        <nav class="navbar" style="padding: 0; margin: 0; border: 0; width: 100%; position: fixed; top: 0;">
-            <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color:aqua;"> 
-                <li>
-                    <a href="#andgate"><b>AND গেট</b></a>
-                </li>
-                <li>
-                    <a href="#orgate"><b>OR গেট</b></a>
-                </li>
-                <li>
-                    <a href="#notgate"><b>NOT গেট</b></a>
-                </li>
-                <li>
-                    <a href="#nandgate"><b>NAND গেট</b></a>
-                </li>
-                <li>
-                    <a href="#norgate"><b>NOR গেট</b></a>
-                </li>
-                <li>
-                    <a href="#xorgate"><b>X-OR গেট</b></a>
-                </li>
-                <li>
-                    <a href="#xnorgate"><b>X-NOR গেট</b></a>
-                </li>
-                <!--
-                <li class="navbar-lang">
-                   <a href="./global/en/"><img src="./src/img/flag_uk.png" alt="ENGLISH" width="24px" height="24px"></a>
-                </li>
-                <li class="navbar-lang">
-                    <a href="./global/cn/"><img src="./src/img/flag_china.png" alt="MANDARIN" width="24px" height="24px"></a>
-                </li> -->
-            </ul>
-        </nav>
+        <script>
+            function toggleMenu() {
+             var overlay = document.getElementById("menuOverlay");
+             overlay.classList.toggle("active");
+             }
 
-            <!--- <div class="supportme">
-                <p style="text-align: center;"><a href="https://www.buymeacoffee.com/w3nabil" target="_blank"><img src="https://cdn.buymeacoffee.com/assets/img/home-page-v3/bmc-new-logo.png" alt="Buy Me A Coffee" style="height: 30px; width: 100px; border: 3px solid black;" ></a></p>
-            </div> --->
-        <div class="scrollable" style="margin-left: 5%; width: 90%; margin-top: 5%; margin-right: 5%; height: 100vh;" >
+        </script>
+        <nav class="mobile-navbar">
+            <div class="logo"><img src="../src/img/palacsinta_learning.png" height="50px" width="auto" alt="Palacsinta Learning"/></div>
+            <div class="burger-menu" onclick="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+          </nav>
+          
+          <div class="menu-overlay" id="menuOverlay">
+            <ul class="menu-items">
+              <li><a href="#basic">Basics of Logicgate</a></li>
+              <li><a href="#andgate">AND GATE</a></li>
+              <li><a href="#orgate">OR GATE</a></li>
+              <li><a href="#notgate">NOT GATE</a></li>
+              <li><a href="#norgate">NOR GATE</a></li>
+              <li><a href="#nandgate">NAND GATE</a></li>
+              <li><a href="#xorgate">X-OR GATE</a></li>
+              <li><a href="#xnorgate">X-NOR GATE</a></li>
+            </ul>
+          </div>
+        <div class="scrollable" style="margin-left: 5%; width: 90%; margin-top: 5%; margin-right: 5%;" >
+            <div id="basic">
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">লজিক গেট কী?</u></h2>
+                <p>লজিক গেট হল ডিজিটাল সার্কিটের মৌলিক বিল্ডিং ব্লক। লজিক গেট বাইনারি ইনপুট ( ০ এবং ১ ) এর উপর ভিত্তি করে লজিক্যাল অপারেশন করে । লজিক গেট এর মৌলিক কাজ হল বাইনারি ইনপুট এর উপর ভিত্তি করে বাইনারি আউটপুট তৈরি করা। </p>
+                <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">লজিক গেট কত প্রকার এবং কি কি?</u></h2>
+                <p>লজিক গেট মূলত ৪ প্রকার । যথাঃ 
+                    <ol>
+                        <li>মৌলিক গেট
+                          <ul class="basicgateli">
+                            <li>AND গেট</li>
+                            <li>OR গেট</li>
+                            <li>NOT গেট</li>
+                          </ul>
+                        </li>
+                        <li>সার্বজনীন গেট
+                          <ul class="basicgateli">
+                            <li>NAND গেট</li>
+                            <li>NOR গেট</li>
+                          </ul>
+                        </li>
+                        <li>এক্সক্লুসিভ গেট
+                          <ul class="basicgateli">
+                            <li>XOR গেট</li>
+                            <li>XNOR গেট</li>
+                          </ul>
+                        </li>
+                        <li>জটিল গেট
+                            <ul class="basicgateli">
+                                <li>Pass</li>
+                            </ul>
+                        </li>
+                      </ol>                      
+                </p>
             
+            </div>
             <!-- AND GATE -->
             <div id="andgate">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">AND গেট</u></h2>
@@ -117,7 +142,7 @@ limitations under the License.
                     </div>
                 </div>
                 <div class="concept">
-                    <p>ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । AND গেটের সমীকরণ A × B = X । যেখানে A এবং B হল আমার ইনপুট এবং X (A গুনন B করার পর) হলো আমার আউটপুট । <br>নোটঃ বুলিয়ার এর গুনন এ A অথবা B যেকোনো একটির মান ০ হলে X = ০ হবে</p>
+                    <p>ধরা যাক 0 হলো মিথ্যা (অফ) এবং 1 হলো সত্য (অন) , অর্থাৎ লাইট টি শুধু তখনই জ্বলবে যখন আউটপুট ১ হবে । AND গেটের সমীকরণ A × B = X । যেখানে A এবং B হল আমার ইনপুট এবং X (A গুনন B করার পর) হলো আমার আউটপুট । <br><br>নোটঃ বুলিয়ার এর গুনন এ A অথবা B যেকোনো একটির মান ০ হলে X = ০ হবে</p>
                 </div>
                 <div id="equation" style="width: 100%;">
                     <table border="2px" style="text-align: center; width: 100%;" class="table">
@@ -152,8 +177,6 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-
-
             <!-- OR GATE -->
             <div id="orgate">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">OR গেট</u></h2>
@@ -211,7 +234,6 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-
             <!-- NOT GATE -->
             <div id="notgate">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NOT গেট</u></h2>
@@ -258,7 +280,6 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-
             <!-- NAND GATE -->
             <div id="nandgate">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NAND গেট</u></h2>
@@ -327,7 +348,6 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-            
             <!-- NOR GATE -->
             <div id="norgate">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">NOR গেট</u></h2>
@@ -395,8 +415,6 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-
-            
             <!-- XOR GATE -->
             <div id="xorgate">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">X-OR গেট</u></h2>
@@ -433,7 +451,7 @@ limitations under the License.
                             <td><span style="text-decoration: overline;">B</span></td>
                             <td><span style="text-decoration: overline;">A</span>B</td>
                             <td>A<span style="text-decoration: overline;">B</span></td>
-                            <td>X = (<span style="text-decoration: overline;">A</span>B + A<span style="text-decoration: overline;">B</span>)</td>
+                            <td>X <!--= (<span style="text-decoration: overline;">A</span>B + A<span style="text-decoration: overline;">B</span>)--> </td>
                         </tr>
                         <tr>
                             <td>0</td>
@@ -474,7 +492,6 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-            
             <!-- X-Nor GATE -->
             <div id="xnorgate" style="padding-bottom: 20vh;">
                 <h2 style="text-align: center; padding-bottom: 5vh; padding-top: 10vh;"><u style="text-decoration: underline aqua;">X-NOR গেট</u></h2>
@@ -511,7 +528,7 @@ limitations under the License.
                             <td><span style="text-decoration: overline;">B</span></td>
                             <td>AB</td>
                             <td><span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span></td>
-                            <td>X = (AB + <span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span>)</td>
+                            <td>X <!--= (AB + <span style="text-decoration: overline;">A</span> <span style="text-decoration: overline;">B</span>)--></td>
                         </tr>
                         <tr>
                             <td>0</td>
@@ -552,25 +569,19 @@ limitations under the License.
                     </table>
                 </div>
             </div>
-
+        </div>
+        <div class="footer" height="auto" width="100%" style="padding-right: 0; padding-left: 0; padding-top: 20px; padding-bottom: 60px; margin: 0; border-top:2px solid orange;">
+            <div class="brand" style="display: flex; text-align: center; justify-content: center;">
+               <h2><img src="../src/img/palacsinta.png" alt="Palacsinta Studio" width="auto" height="90px" /></h2>
+               <h2><img src="../src/img/palacsinta_learning.png" alt="Palacsinta Learning" width="auto" height="100px" /></h2>
+            </div>
+            <p><b>&copy 2024. Palacsinta Studio & Palacsinta Learning</b></p>
         </div>
     </div>
-    
-    <style>
-        .notice {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: aqua;
-            color: black;
-            text-align: center;
-            padding: 5px;
-            font-size: 12px;
-        }
-    </style>
-
+     <!-- 
     <div class="notice">
         <marquee style="width: 100%;" behavior="scroll" direction="left"><b> এই ওয়েবসাইটটি সর্বশেষ ১লা ডিসেম্বর, ২০২৩ এ আপডেট করা হয়েছে । আমাদের ওয়েবসাইটটি সম্পূর্ন HTML , JAVASCRIPT এবং CSS এর সাহায্যে সাধারণভাবে বানানো হয়েছে, যাতে যে কেও বুঝতে পারে কিভাবে HTML , JAVASCRIPT এবং CSS একসাথে ওয়েবসাইট এ কাজ করে । <a href="./notice/">Notice Board</a> </b></marquee>
-    </div>
+    </div> -->
+
 </body>
 </html>

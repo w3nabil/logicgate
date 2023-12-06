@@ -9,6 +9,9 @@
 body, ul {
     font-family: 'Nano Sans', sans-serif;
     margin: 0;
+    padding: 0;
+    border: 0;
+    line-height: 2;
 }
 
 
@@ -31,24 +34,108 @@ body, ul {
     align-items: center;
     z-index: 9999;
 }
-.navbar li {
-    display: inline-block;
-}
-.navbar li a {
+
+/* Mobile navbar styles */
+.mobile-navbar {
+    margin: 0;
+    border: 0;
+    top: 0;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    padding-left: 15px;
+    padding-top: 15px;
+  }
+  
+  .burger-menu {
     display: block;
-    color: #2d2d2d;
-    text-align: center;
-    padding: 5px 6px;
+    cursor: pointer;
+    padding-right: 15px;
+  }
+  
+  .burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    height: 100%;
+    background-color: #333;
+    transition: 0.4s ease-in-out;
+  }
+  
+  .menu-items {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 50px;
+  }
+  
+  .menu-items li {
+    margin-bottom: 20px;
+  }
+  
+  .menu-items li a {
     text-decoration: none;
-}
-.navbar li a:hover {
-    background-color: #2d2d2d;
-    color: #fafafa;
-    border-radius: 5px;
-}
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .menu-overlay.active {
+    left: 0;
+  }
 
 h4, h5 {
     text-align: center;
 }
 
-/* Path: mobile/index.css */
+.basicgateli{
+    padding-left: 15px;
+}
+
+        
+.footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #2d2d2d;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.notice {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: aqua;
+    color: black;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+    border-top: 1px solid orange;
+    border-bottom: 1px solid orange;
+}
+
+/* Path: ./mobile/index.css */
